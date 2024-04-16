@@ -8,4 +8,4 @@ pillow
 hachoir
 requests
 redis
-dotenv
+
