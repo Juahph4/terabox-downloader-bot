@@ -1,14 +1,16 @@
-API_ID = 123456  # api id
-API_HASH = "ed44780dedd182084f2133b16944cf565"  # api hash
+from dotenv import load_dotenv
+import os
 
-BOT_TOKEN = "123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11"  # bot token
+# Carga las variables de entorno desde el archivo .env
+load_dotenv()
 
-
-## REDIS
-HOST = "localhost"  # redis host uri
-PORT = 6379  # redis port
-PASSWORD = ""  # redis password
-
-PRIVATE_CHAT_ID = -1001234567890  # CHAT WHERE YOU WANT TO STORE VIDEOS
-COOKIE = ""  # COOKIE FOR AUTHENTICATION (get from chrome dev tools) ex: "PANWEB=1; csrfToken=; lang=en; TSID=; __bid_n=; _ga=; __stripe_mid=; ndus=; browserid==; ndut_fmt=; _ga_06ZNKL8C2E=" (don't use this)
-ADMINS = [1317173146]
+# Ahora puedes acceder a las variables de entorno usando os.environ
+API_ID = int(os.getenv("API_ID"))
+API_HASH = os.getenv("API_HASH")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+HOST = os.getenv("HOST")
+PORT = int(os.getenv("PORT"))
+PASSWORD = os.getenv("PASSWORD")
+PRIVATE_CHAT_ID = int(os.getenv("PRIVATE_CHAT_ID"))
+COOKIE = os.getenv("COOKIE")
+ADMINS = [int(admin_id) for admin_id in os.getenv("ADMINS").split(",")]
