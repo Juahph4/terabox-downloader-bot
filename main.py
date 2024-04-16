@@ -11,7 +11,17 @@ from telethon.tl.functions.messages import ForwardMessagesRequest
 from telethon.types import Message, UpdateNewMessage
 
 from cansend import CanSend
-from config import *
+
+API_ID = int(os.getenv("API_ID"))
+API_HASH = os.getenv("API_HASH")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+HOST = os.getenv("HOST")
+PORT = int(os.getenv("PORT"))
+PASSWORD = os.getenv("PASSWORD")
+PRIVATE_CHAT_ID = int(os.getenv("PRIVATE_CHAT_ID"))
+COOKIE = os.getenv("COOKIE")
+ADMINS = [int(admin_id) for admin_id in os.getenv("ADMINS").split(",")]
+
 from terabox import get_data
 from tools import (
     convert_seconds,
