@@ -1,9 +1,4 @@
-from dotenv import load_dotenv
 import os
-
-# Carga las variables de entorno desde el archivo .env
-load_dotenv()
-
 # Ahora puedes acceder a las variables de entorno usando os.environ
 API_ID = int(os.getenv("API_ID"))
 API_HASH = os.getenv("API_HASH")
